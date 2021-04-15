@@ -137,7 +137,7 @@ func newLines(contents []string, commits []*object.Commit) ([]*Line, error) {
 	result := make([]*Line, 0, lcontents)
 	for i := range contents {
 		result = append(result, newLine(
-			commits[i].Author.Email, contents[i],
+			commits[i].Author.Name, contents[i],
 			commits[i].Author.When, commits[i].Hash,
 		))
 	}
